@@ -5,14 +5,71 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --topbarBackground: #24292f;
+  --title-color :#478be6;
+  --card-border:#d1d9e0;
+  --topFont:#ffffff;
+  --fontes-destacadas: #171717;
+  --fgColor-neutral: #d1d9e0;
+
+  --secondarColorCard:#59636e
+}
+/* #3d3df4
+#5cb0fc
+#07077d
+#75777b
+#b4bcbe
+#3c4448 */
+.topbar{
+  background:var(--topbarBackground);
+  border-bottom: 1px solid var(--fgColor-neutral);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #272b2e;
+    --foreground: #d1d7e0;
+    --topbarBackground:#12121d;
+    --title-color :#478be6;
+    --card-border:#d1d7e0;
+    --topFont: var(--foreground);
+    --fontes-destacadas:  #d1d7e0;
+    --fgColor-neutral: #9198a1;
+    --secondarColorCard:var(--foreground);
   }
 }
+
+.cardSecondary{
+  color:var(--secondarColorCard)
+}
+
+.topbar{color:var(--topFont)}
+
+.cardItem{
+  border: 1px var(--fgColor-neutral) solid;
+  color:var(--fgColor-neutral);
+  border-radius: 20px;
+}
+
+
+h1{
+  font-size:30px; /* 1.875rem (30px) */ 
+  line-height: calc(2.25 / 1.875); /*  */
+}
+
+h2{
+  font-size: 22px;
+}
+
+p{
+  font-size:18px
+}
+
+
+.topbarCurrentItem{
+  border-bottom: 3px solid #976c2c ;
+}
+
 
 body {
   color: var(--foreground);
