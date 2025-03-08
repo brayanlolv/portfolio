@@ -1,10 +1,11 @@
 import Link from "next/link"
 
-type demoType = {
+export type demoType = {
     titulo:string,
     descricao:string,
     link:string,
-    keywords:string[]
+    keywords:string[],
+
 }
 
 export default function DemoCard({props}:{props:demoType}){

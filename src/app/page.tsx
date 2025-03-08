@@ -1,19 +1,23 @@
 import Projetos from "@/repository/Projetos";
 import DemoCard from "@/components/DemoCard";
-import ListItem from "@/components/ListItem";
-const projetosRepository = new Projetos;
 
+const projetosRepository = new Projetos;
+export type projetosType = {
+  id:string,
+  titulo:string,
+  descricao:string,
+  keywords:string[],
+  star:boolean
+}
 export default async function Home() {
   const demo = await projetosRepository.getDemoProjetos()
-  const i = 0
-  console.log(demo)
   return (<div className="">
 
         <h1 className="pl-4">Projetos</h1>
         {/* ta bom no taela grande */}
         {/* flex */}
         <div className="flex flex-wrap  gap-4 p-4 ">
-          {demo.rows.filter((x:any)=> x.star).map((row:any)=>{
+          {demo.rows.filter((x:projetosType)=> x.star).map((row:projetosType)=>{
               return<DemoCard props={{
                 titulo:row.titulo,
                 descricao:row.descricao,
@@ -25,13 +29,13 @@ export default async function Home() {
         </div>
 
         <div className="m-auto ">
-            <h2 >
-              Quem sou ?
-            </h2>
+          <h2 >
+            Quem sou ?
+          </h2>
            <p className="indent-8">
-           Olá, me chamo Brayan, estudante de ciência da computação no 5° periodo com experiências não formais em 
-           programação web e  vivência no ramo de movelaria há 4 e fiz essa pagina para  compartilhar meus
-           aprendizados, ideias e projetos. 
+            Olá, me chamo Brayan, estudante de ciência da computação no 5° periodo com experiências não formais em 
+            programação web e  vivência no ramo de movelaria há 4 e fiz essa pagina para  compartilhar meus
+            aprendizados, ideias e projetos. 
           </p>
           <p className="indent-8">Hoje em dia me aventuro no mundo do desenvolvimento de softwares, especialmente na area web,
             focando meus estudos em fullstack, onde encontrei

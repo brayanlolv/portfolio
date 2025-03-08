@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 
-export default function Carroseul({imgsSrc,videoId}:{imgsSrc:string[],videoId?:string}){
+export default function Carroseul({imgsSrc}:{imgsSrc:string[]}){
     const [modal,setModal] = useState(false)//teasfasd
     
   
@@ -21,9 +21,6 @@ export default function Carroseul({imgsSrc,videoId}:{imgsSrc:string[],videoId?:s
     onClick={()=>setModal(false)}
     > 
     </div>
-        
-
-
 
     <div className='m-auto '>
       <Swiper 
@@ -40,7 +37,6 @@ export default function Carroseul({imgsSrc,videoId}:{imgsSrc:string[],videoId?:s
     >
         <div  className={modal? 'h-[500px]':'' + 'w-full'}>
         
-      
 
         {
           imgsSrc.map((x)=>{

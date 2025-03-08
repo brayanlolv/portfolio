@@ -4,9 +4,9 @@ import { Bars3Icon,XMarkIcon } from '@heroicons/react/24/outline'
 import Config from '@/data/config.json'
 
 
-const className = "bg-black w-[250px] transition-[margin-left] ease-in-out duration-500 fixed md:static top-0 bottom-0 left-0 z-40";
-    // Append class based on state of sidebar visiblity
-const appendClass = " ml-[-250px] md:ml-0";
+// const className = "bg-black w-[250px] transition-[margin-left] ease-in-out duration-500 fixed md:static top-0 bottom-0 left-0 z-40";
+//     // Append class based on state of sidebar visiblity
+// const appendClass = " ml-[-250px] md:ml-0";
 
 const navigation = [
   { name: 'Home', href: '/', path: '',current:false },
@@ -14,16 +14,12 @@ const navigation = [
   { name: 'Blog', href: '/blog', path: 'blog', current:false },
   { name: 'Sobre Mim', href: '/sobre-mim', path: 'sobre-mim', current:false   },
 ]
-function classNames(...classes:any[]) {
-    return classes.filter(Boolean).join(' ')
-  }
-  
+
 export default function RootLayout({
     children,
   }: Readonly<{
     children: React.ReactNode;
   }>) {
-
     const page = window.location.href.split('/')[3]
     return (
       <html >
@@ -54,11 +50,7 @@ export default function RootLayout({
                     return <a
                     key={item.name}
                     href={item.href}
-                    className={classNames(
-                      item.current ? 'topbarCurrentItem font-bold  ' : '',
-                      'text-lg px-4'
-                     
-                    )}
+                    className={item.current ?"topbarCurrentItem font-bold  ":"" +'text-lg px-4' }
                   >
                     {item.name}
                   </a>
@@ -80,9 +72,9 @@ export default function RootLayout({
               as="a"
               href={item.href}
               aria-current={item.current ? 'page' : undefined}
-              className={classNames(
+              className={
                 item.current ? 'topbarCurrentItem font-bold  ' : ''
-              )}
+              }
             >
               {item.name}
             </DisclosureButton>

@@ -2,18 +2,6 @@ import Publicacao from "@/components/ui/Publicacao"
 import Projetos from "@/repository/Projetos"
 const projectRepository = new Projetos
 
-
-
-const testProp = {
-
-  titulo:'Contador de horas',
-  descricao:'projeto feito com intuito de familiarização com o typescript num projeto react',
-  texto:['ooasdadasdak dfkaofjkpdsaiof sadfsapdfjkpdsao saf sadfj',
-    'adsjpsadja asdapsd adasdika spdad apsod '
-  ]
-}
-
-
 export default async function Page({
     params,
   }: {
