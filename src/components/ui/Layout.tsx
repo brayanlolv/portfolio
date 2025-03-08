@@ -2,6 +2,9 @@
 import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
 import { Bars3Icon,XMarkIcon } from '@heroicons/react/24/outline'
 import Config from '@/data/config.json'
+ 
+// import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 
 // const className = "bg-black w-[250px] transition-[margin-left] ease-in-out duration-500 fixed md:static top-0 bottom-0 left-0 z-40";
@@ -9,10 +12,10 @@ import Config from '@/data/config.json'
 // const appendClass = " ml-[-250px] md:ml-0";
 
 const navigation = [
-  { name: 'Home', href: '/', path: '',current:false },
-  { name: 'Projetos', href: '/projetos', path: 'projetos' ,current:false},
-  { name: 'Blog', href: '/blog', path: 'blog', current:false },
-  { name: 'Sobre Mim', href: '/sobre-mim', path: 'sobre-mim', current:false   },
+  { name: 'Home', href: '/', current:false },
+  { name: 'Projetos', href: '/projetos', current:false},
+  { name: 'Blog', href: '/blog',current:false },
+  { name: 'Sobre Mim', href: '/sobre-mim',  current:false   },
 ]
 
 export default function RootLayout({
@@ -20,7 +23,9 @@ export default function RootLayout({
   }: Readonly<{
     children: React.ReactNode;
   }>) {
-    const page = window.location.href.split('/')[3]
+
+    const page = usePathname()
+
     return (
       <html >
         <body>
@@ -45,7 +50,7 @@ export default function RootLayout({
               <div className="flex ">
                 {navigation.map((item)=>{
 
-                    if(item.path == page)item.current=true
+                    if(item.href == page)item.current=true
 
                     return <a
                     key={item.name}
