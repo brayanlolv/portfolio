@@ -25,6 +25,7 @@ export default function RootLayout({
   }>) {
 
     const page = usePathname()
+    console.log(page)
 
     return (
       <html >
@@ -50,7 +51,8 @@ export default function RootLayout({
               <div className="flex ">
                 {navigation.map((item)=>{
 
-                    if(item.href == page)item.current=true
+                    item.current = item.href == page
+              
 
                     return <a
                     key={item.name}
