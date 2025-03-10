@@ -3,7 +3,7 @@
 export default function Page(){
     return (
     <div className="flex justify-center md:h-fit items-center mx-auto">
-        <section className="m-auto w-10/12 max-w-[1200px] pt-4">
+        <section className="m-auto w-full sm:w-11/12  lg:max-w-[1200px] pt-4">
         <p className="indent-8">
            Olá, me chamo Brayan, estudante de ciência da computação no 5° periodo com experiências não formais em 
            programação web e  vivência no ramo de movelaria há 4 e fiz essa pagina para  compartilhar meus

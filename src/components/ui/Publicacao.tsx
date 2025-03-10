@@ -20,7 +20,7 @@ export default function Publicacao({args}:{args:PublicacaoProp}){
                 : null 
             }
      
-            <section className="m-auto w-10/12 max-w-[1200px]">
+            <section className="m-auto w-full sm:w-11/12  lg:max-w-[1200px] pt-4">
 
             <h1 className="pt-4 text-[var(--title-color)]">{args.titulo}</h1>
             <h2 className="  pb-4  text-[var(--fgColor-neutral)]">{args.descricao}</h2>
