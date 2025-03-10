@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import RootLayout from "@/components/ui/Layout";
 
 export const metadata: Metadata = {
@@ -13,7 +14,10 @@ export default function Layout({
   children: React.ReactNode;
 }>){
   return(
-    <RootLayout>{children}</RootLayout>
+    <RootLayout>
+      {children}
+      <Analytics/>
+    </RootLayout>
   )
 }
 
