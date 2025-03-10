@@ -1,6 +1,6 @@
 'use client'
 import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
-import { Bars3Icon,XMarkIcon } from '@heroicons/react/24/outline'
+
 import Config from '@/data/config.json'
  
 // import { useRouter } from 'next/navigation'
