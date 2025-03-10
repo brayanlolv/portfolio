@@ -33,7 +33,7 @@ export default function Publicacao({args}:{args:PublicacaoProp}){
             </section>
                 { args.videoId ?
                 //  h-[300px] md:h-[300px] lg:h-[400px] 
-                    <iframe className='pt-4 m-auto flex-[1_1_400] w-10/12'  src={"https://www.youtube.com/embed/"} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <iframe className='pt-4 m-auto flex-[1_1_250] w-10/12'  src={"https://www.youtube.com/embed/"+args.videoId} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 :null
                 }
             <div
