@@ -26,7 +26,12 @@ export default function Publicacao({args}:{args:PublicacaoProp}){
             <h2 className="  pb-4  text-[var(--fgColor-neutral)]">{args.descricao}</h2>
           
                 {
-                    args.texto?.map((paragrafo)=><p className="indent-8">{paragrafo}</p>)
+                    args.texto?.map((paragrafo)=>{
+                        if(paragrafo.startsWith("S:")){
+                            return <h2 className="py-4  text-[var(--fgColor-neutral)]">{paragrafo.substring(2)}</h2>
+                        }
+                        return <p className="indent-8">{paragrafo}</p>
+                    })
                 } 
 
            
