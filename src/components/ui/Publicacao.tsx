@@ -1,3 +1,5 @@
+
+
 import Carroseul from "../carrosel"
 export type PublicacaoProp = {
     titulo:string,
@@ -8,7 +10,9 @@ export type PublicacaoProp = {
 
 }
 
+
 export default function Publicacao({args}:{args:PublicacaoProp}){  
+
     return(<div className="p-4 flex flex-col ">
 
            

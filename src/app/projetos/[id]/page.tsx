@@ -1,6 +1,10 @@
 import Publicacao from "@/components/ui/Publicacao"
 import Projetos from "@/repository/Projetos"
 const projectRepository = new Projetos
+import { Metadata } from "next"
+
+export const metadata:Metadata = {
+}
 
 export default async function Page({
     params,
@@ -12,22 +16,17 @@ export default async function Page({
     if(parseInt(urlId)){
        project = await projectRepository.getProjectById(urlId) 
       }
+
+    if(project?.rowCount){
+      metadata.title = project.rows[0].titulo
+      metadata.description = project.rows[0].descricao
+      return(<Publicacao args={{
+        titulo:project.rows[0].titulo,
+        descricao:project.rows[0].descricao,
+        texto:project.rows[0].texto,
+        videoId:project.rows[0].videoId
+      }}/>)
+    }
   
-    return (<>
-    {project?.rowCount ?<Publicacao args={{
-                                            titulo:project.rows[0].titulo,
-                                            descricao:project.rows[0].descricao,
-                                            texto:project.rows[0].texto,
-                                            videoId:project.rows[0].videoId
-    }}/>:
-    <>
-      <h1> Problema na requisição :(</h1> 
-    </> }
-        
-    
-    </>
-    // <div className="flex justify-center md:h-fit items-center mx-auto">
-    //     <WorkingAt/>
-    // </div>
-    )
+    return (<h1> Problema na requisição :(</h1> )
 }
