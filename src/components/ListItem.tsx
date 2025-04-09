@@ -11,7 +11,7 @@ export default function ListItem({props}:{props:demoType}){
 
     return(
             
-        <div className="w-full  lg:flex-[1_1_300]   cardItem ">
+        <div className="w-full  lg:flex-[1_1_300px]   cardItem ">
                       
             {/* <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"/> */}
             <div className="px-6 py-4">
