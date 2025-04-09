@@ -1,6 +1,6 @@
 'use client'
 import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
-
+import Link from 'next/link'
 import Config from '@/data/config.json'
  
 // import { useRouter } from 'next/navigation'
@@ -55,14 +55,9 @@ export default function RootLayout({
                 {navigation.map((item)=>{
 
                     item.current = item.href == page
-
-                    return <a
-                    key={item.name}
-                    href={item.href}
-                    className={item.current ?"topbarCurrentItem font-bold  ":"" +'text-lg px-4' }
-                  >
-                    {item.name}
-                  </a>
+                  return<Link href={item.href}  className={item.current ?"topbarCurrentItem font-bold  ":"" +'text-lg px-4' }>
+                          {item.name}
+                        </Link>
             })}
               </div>
             </div>
