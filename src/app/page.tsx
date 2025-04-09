@@ -18,7 +18,7 @@ export default async function Home() {
         {/* flex */}
         <div className="flex flex-wrap  gap-4 p-4 ">
           {demo.rows.filter((x:projetosType)=> x.star).map((row:projetosType)=>{
-              return<DemoCard props={{
+              return <DemoCard props={{
                 titulo:row.titulo,
                 descricao:row.descricao,
                 link:row.id,
