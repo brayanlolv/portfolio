@@ -8,7 +8,7 @@ export type demoType = {
 
 }
 
-export default function DemoCard({props}:{props:demoType}){
+export default async function DemoCard({props}:{props:demoType}){
 
     return(
         // #d1d7e0 text-foreground

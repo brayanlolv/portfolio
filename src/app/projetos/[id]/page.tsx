@@ -3,8 +3,14 @@ import Projetos from "@/repository/Projetos"
 const projectRepository = new Projetos
 import { Metadata } from "next"
 
-export const metadata:Metadata = {
-}
+
+
+
+
+
+
+
+
 
 export default async function Page({
     params,
@@ -16,6 +22,7 @@ export default async function Page({
     if(parseInt(urlId)){
        project = await projectRepository.getProjectById(urlId) 
       }
+    
 
     if(project?.rowCount){
       metadata.title = project.rows[0].titulo
@@ -30,3 +37,4 @@ export default async function Page({
   
     return (<h1> Problema na requisição :(</h1> )
 }
+export const metadata:Metadata = {}

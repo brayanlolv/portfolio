@@ -3,7 +3,7 @@ import ListItem from "@/components/ListItem"
 import { projetosType } from "../page"
 
 const projetosRepository = new Projetos
-export default async  function Page(){
+export default async function Page(){
     const projetos = await projetosRepository.getDemoProjetos()
     return (<>
         <h1>Projetos</h1>
