@@ -91,7 +91,7 @@ export default function RootLayout({
       <div className='md:flex  '>
         <div className='flex-none bg-background flex flex-col pl-6  md:w-[450px]  md:top-0  md:left-0'>
                 <div>
-                  <Image src={Config.sidebar.AvatarImgUrl} alt="foto de perfil" className='rounded-full p-4 m-auto'/>
+                  <img src={Config.sidebar.AvatarImgUrl} alt="foto de perfil" className='rounded-full p-4 m-auto'/>
                 </div>
                 <h1 className='font-bold'>{Config.sidebar.nome}</h1>
                 <p>20 anos</p>
