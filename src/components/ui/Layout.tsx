@@ -2,8 +2,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
 import Link from 'next/link'
 import Config from '@/data/config.json'
-import Image from 'next/image'
-// import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 
 
