@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@deemlol/next-icons": "^0.1.9",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@vercel/analytics": "^1.5.0",

@@ -3,6 +3,8 @@ import { Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
 import Link from 'next/link'
 import Config from '@/data/config.json'
 import { usePathname } from 'next/navigation'
+import MyLinks from "@/components/IconsLinks";
+
 
 
 // const className = "bg-black w-[250px] transition-[margin-left] ease-in-out duration-500 fixed md:static top-0 bottom-0 left-0 z-40";
@@ -97,6 +99,7 @@ export default function RootLayout({
                 <p>desenvolvedor fullstack</p>
                 <p>Javascript, php, web</p>
                 <p>Guarulhos e Zona Norte São Paulo</p>
+                <MyLinks/>
         </div>
           <div className='m-auto w-11/12 md:h-[90vh] '>
           <div className='pt-4'>

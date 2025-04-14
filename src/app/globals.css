@@ -11,7 +11,6 @@
   --topFont:#ffffff;
   --fontes-destacadas: #171717;
   --fgColor-neutral:rgb(95, 139, 180);
-
   --secondarColorCard:#59636e
 }
 /* #3d3df4
@@ -24,6 +23,7 @@
   background:var(--topbarBackground);
   border-bottom: 1px solid var(--fgColor-neutral);
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -39,6 +39,10 @@
   }
 }
 
+svg{
+  /* color:var(--foreground) */
+  
+}
 .cardSecondary{
   color:var(--secondarColorCard)
 }

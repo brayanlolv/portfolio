@@ -13,8 +13,8 @@ export type demoType = {
 export default async function DemoCard({props}:{props:demoType}){
 
     return(
-        // #d1d7e0 text-foreground
-        <div className="min-w-[300px] max-w-[600px] xl:min-w-[440px]   flex-[1_1_300px]   cardItem ">
+        //min-w-[440px]  
+        <div className="min-w-[300px]  2xl:min-w-[400px]  flex-[1_1_300px]   cardItem ">
                       
             {/* <img className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"/> */}
             <div className="px-6 py-4">
@@ -28,6 +28,11 @@ export default async function DemoCard({props}:{props:demoType}){
                     return  <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{x}</span>
                     }
                 )}
+            </div>
+
+            <div>
+                
+
             </div>
 </div>
     )
