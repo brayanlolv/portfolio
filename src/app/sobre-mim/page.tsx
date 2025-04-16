@@ -28,6 +28,8 @@ export default function Page(){
           
           
         </section>
+        <div className="h-[30vh]"></div>
+
     </div>
     )
 }

@@ -1,8 +1,7 @@
 import Link from "next/link"
 import { Linkedin, Email, Github } from "@deemlol/next-icons"
+// import { FileText } from "@deemlol/next-icons"
 import Config from "@/data/config.json"
-//quais icones eu quero ?
-//linkedin, email, github,
 
 export default function Links(){
     
@@ -19,5 +18,8 @@ export default function Links(){
         <Link href={Config.links.linkedin}>
             <Linkedin size={24} color={"var(--foreground)"} />
         </Link>
+        {/* <Link href={"curriculo.txt"}>
+                <FileText size={24} color={"var(--foreground)"}/>
+        </Link> */}
     </div>)
 }

@@ -19,6 +19,7 @@ export default async function Page(){
                     })}
                     
                 </div>
+                <div className="h-[30vh]"></div>
 
         {/* fazer um map com os projetos */}
 

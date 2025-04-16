@@ -51,8 +51,7 @@ export default async function Home() {
              {/* tendo contato com projetos( leitura, criação de plano de corte e promob básico),
              produções(fitagem, acabamento etc..) e montagens de móveis como meio-oficial .  */}
         </div>
-        <div
-        className="h-[30vh]"></div>
+        <div className="h-[30vh]"></div>
 
         
     </div>
