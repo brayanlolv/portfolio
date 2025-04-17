@@ -1,6 +1,5 @@
 import Projetos from "@/repository/Projetos";
 import DemoCard from "@/components/DemoCard";
-
 const projetosRepository = new Projetos;
 export type projetosType = {
   id:string,
