@@ -3,7 +3,7 @@ import Projetos from "@/repository/Projetos"
 const projectRepository = new Projetos
 import { cache } from 'react';
 
-export const getPost = cache(async (id:string) => {
+const getPost = cache(async (id:string) => {
   if(parseInt(id)){
    const  x = await projectRepository.getProjectById(id);
    if(x.rowCount){
