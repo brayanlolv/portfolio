@@ -5,13 +5,15 @@ export type PublicacaoProp = {
     titulo:string,
     descricao:string,
     texto:string[],
-    videoId?:string ,
-    imgs?:string[]
-
+    imgs?:string[],
+    videoId?:string,
+    links?:object
 }
 
 
 export default function Publicacao({args}:{args:PublicacaoProp}){  
+
+
 
     return(<div className="p-4 flex flex-col ">
 
@@ -41,12 +43,27 @@ export default function Publicacao({args}:{args:PublicacaoProp}){
            
             </section>
                 { args.videoId ?
-                //  h-[300px] md:h-[300px] lg:h-[400px] 
                     <iframe className='pt-4 m-auto flex-[1_1_250] w-10/12'  src={"https://www.youtube.com/embed/"+args.videoId} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 :null
                 }
-            <div
-            className="h-[30vh]"></div>
+
+            {
+                args.links &&
+                <div className="m-auto w-full sm:w-11/12  lg:max-w-[1200px] pt-4">
+                    <h2>Links</h2>
+                    <div className=" flex flex-col">
+                        {
+                            Object.entries(args.links).map(([nome,link])=>{
+                                return <a className="text-blue-500 decoration-solid italic text-lg indent-8" href={link + ''}>{nome}</a>//erro idiota
+                            })
+                        }
+                    </div> 
+                </div>  
+            }
+           
+
+                
+            <div className="h-[30vh]"></div>
             
            
 

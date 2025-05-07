@@ -43,7 +43,8 @@ export default async function Page({
         titulo:x.titulo,
         descricao:x.descricao,
         texto:x.texto,
-        videoId:x.videoId
+        videoId:x.videoId,
+        links:x.links
       }}/>)
     }
   
