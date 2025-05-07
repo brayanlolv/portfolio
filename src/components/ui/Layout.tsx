@@ -31,7 +31,7 @@ export default function RootLayout({
       <html >
         <body>
             {/* {window.location.href.split('/')[3]} */}
-        <Disclosure as="nav" className="fixed  w-[100vw]">
+        <Disclosure as="nav" className="md:fixed  w-[100vw]">
     
       <div className="sm:px-6 lg:px-8 topbar">
         <div className="relative flex h-16 items-center justify-between">
