@@ -10,6 +10,7 @@ export type projetosType = {
 }
 export default async function Home() {
   const demo = await projetosRepository.getDemoProjetos()
+  
   return (<div className="">
 
         <h1 className="pl-4">Projetos</h1>

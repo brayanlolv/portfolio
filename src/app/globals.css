@@ -47,7 +47,9 @@ svg{
   color:var(--secondarColorCard)
 }
 
-.topbar{color:var(--topFont)}
+.topbar{
+  color:var(--topFont)
+}
 
 .cardItem{
   border: 1px var(--fgColor-neutral) solid;
