@@ -21,7 +21,8 @@ export async function  generateMetadata({
   const x = await getPost((await params).id)
   if(x){
     return{
-      title:x.titulo
+      title:x.titulo,
+      description:x.descricao
     }
   }
   return {}
